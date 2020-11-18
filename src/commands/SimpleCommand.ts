@@ -34,7 +34,13 @@ export default class SimpleCommand implements Command {
       .setTitle(embedContent.title)
       .setDescription(embedContent.message)
       .setColor('#004de6')
-      .setFooter('Azuriom Discord Bot');
+      .setFooter('Azuriom Discord Bot')
+      .setTimestamp(new Date());
+
+    if ('fields' in embedContent) {
+      // @ts-ignore - TODO
+      embed.addFields(embedContent.fields);
+    }
 
     message.channel.send(embed);
   }

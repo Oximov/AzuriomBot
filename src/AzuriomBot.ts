@@ -16,7 +16,7 @@ export default class AzuriomBot {
 
   public async start() {
     this.registerListeners();
-    // this.registerCommands();
+    this.registerCommands();
 
     await this.client.login(config.token);
 
