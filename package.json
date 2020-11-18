@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc",
     "start": "tsc && node build/src",
-    "format": "prettier --write --parser typescript \"src/**/*.ts\""
+    "lint": "prettier --write --parser typescript \"src/**/*.ts\""
   },
   "author": "Azuriom",
   "license": "MIT",
