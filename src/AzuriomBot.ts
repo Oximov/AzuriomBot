@@ -2,6 +2,7 @@ import { Client, Collection } from 'discord.js';
 import AutoUploadListener from './listeners/AutoUploadListener';
 import CommandsListener from './listeners/CommandsListener';
 import LanguageSelectionListener from './listeners/LanguageSelectionListener';
+import SuggestionsListener from './listeners/SuggestionsListener';
 import Command from './commands/Command';
 import SimpleCommand from './commands/SimpleCommand';
 import commands from './commands/commands';
@@ -45,6 +46,7 @@ export default class AzuriomBot {
     new AutoUploadListener(this).register();
     new CommandsListener(this).register();
     new LanguageSelectionListener(this).register();
+    new SuggestionsListener(this).register();
   }
 
   private registerCommands() {

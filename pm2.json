@@ -1,0 +1,9 @@
+{
+  "apps": [
+    {
+      "name": "azuriom-bot",
+      "script": "npm",
+      "args": "start"
+    }
+  ]
+}

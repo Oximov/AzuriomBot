@@ -8,6 +8,9 @@ export default {
 
   channels: {
     welcome: '0',
+    suggestions: [
+      '0',
+    ],
   },
 
   categories: {

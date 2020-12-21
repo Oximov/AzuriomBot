@@ -45,7 +45,7 @@ export default [
     name: 'docs',
     embed: {
       en: {
-        title: 'Common Problems',
+        title: 'Documentation',
         message:
           'You can find information about the installation and use of Azuriom in the [documentation](https://azuriom.com/en/docs).',
       },
