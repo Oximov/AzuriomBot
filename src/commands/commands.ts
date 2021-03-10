@@ -9,7 +9,7 @@ export default [
         fields: [
           {
             name: 'Don’t forget to read the documentation',
-            value: 'https://azuriom.com/fr/docs',
+            value: 'https://azuriom.com/en/docs',
           },
         ],
       },
@@ -78,7 +78,7 @@ export default [
       fr: {
         title: 'Installation',
         message:
-          'Vous pouvez trouver des informations à propos de l’installation d’Azuriom et de ses pré-requis dans la [documentation](https://azuriom.com/en/docs/installation).',
+          'Vous pouvez trouver des informations à propos de l’installation d’Azuriom et de ses pré-requis dans la [documentation](https://azuriom.com/fr/docs/installation).',
         fields: [
           {
             name: 'Pour une installation sur cPanel, une vidéo est également disponible',
@@ -99,12 +99,12 @@ export default [
       en: {
         title: 'Logs',
         message:
-          'In case of errors, please send the logs located in `storage/logs` folder in order to simplify troubleshooting!',
+          "In case of 500 error, please send the logs located in `storage/logs` folder in order to simplify troubleshooting! If the logs aren't created, check the permissions.",
       },
       fr: {
         title: 'Logs',
         message:
-          'En cas d’erreurs, envoyez les logs situés dans dans le dossier `storage/logs` afin de pouvoir simplifier la résolution du problème!',
+          "En cas d’erreur 500, envoyez les logs situés dans dans le dossier `storage/logs` afin de pouvoir simplifier la résolution du problème! Si aucun logs n'est créé, pensez à vérifier les permissions.",
       },
     },
   },

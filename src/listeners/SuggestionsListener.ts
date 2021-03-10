@@ -2,7 +2,7 @@ import { Message } from 'discord.js';
 import Listener from './Listener';
 import config from '../../config';
 
-export default class AutoUploadListener extends Listener {
+export default class SuggestionsListener extends Listener {
   public register() {
     this.client.on('message', this.onMessage);
   }
