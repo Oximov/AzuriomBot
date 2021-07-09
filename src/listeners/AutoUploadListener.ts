@@ -1,20 +1,20 @@
-import { Message, MessageAttachment, PartialMessage } from 'discord.js';
+import { Message, MessageAttachment, PartialMessage, Snowflake } from 'discord.js';
 import axios from 'axios';
 import Listener from './Listener';
 
 const pasteUrl = 'https://paste.gg/p/anonymous/';
 const pasteUploadUrl = 'https://api.paste.gg/v1/pastes';
 const textExtensions = ['txt', 'json', 'yml', 'log', 'php', 'css', 'scss', 'js', 'ts', 'vue', 'md'];
-const userAttachments: { [key: string]: string } = {};
+const userAttachments: { [key: string]: Snowflake } = {};
 
 export default class AutoUploadListener extends Listener {
   public register() {
-    this.client.on('message', this.onMessage);
+    this.client.on('messageCreate', this.onMessage);
     this.client.on('messageDelete', this.onMessageDelete);
   }
 
   private onMessage(message: Message) {
-    if (message.author.bot || message.channel.type !== 'text' || !message.attachments) {
+    if (message.author.bot || message.channel.type !== 'GUILD_TEXT' || !message.attachments) {
       return;
     }
 
@@ -38,7 +38,7 @@ export default class AutoUploadListener extends Listener {
   }
 
   private onMessageDelete(message: Message | PartialMessage) {
-    if (message.channel.type !== 'text' || !(message.id in userAttachments)) {
+    if (message.channel.type !== 'GUILD_TEXT' || !(message.id in userAttachments)) {
       return;
     }
 

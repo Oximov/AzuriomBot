@@ -1,4 +1,11 @@
-import { Emoji, MessageReaction, PartialUser, Snowflake, User } from 'discord.js';
+import {
+  Emoji,
+  MessageReaction,
+  PartialMessageReaction,
+  PartialUser,
+  Snowflake,
+  User,
+} from 'discord.js';
 import Listener from './Listener';
 import config from '../../config';
 
@@ -6,9 +13,18 @@ export default class LanguageSelectionListener extends Listener {
   public register() {
     this.client.on('messageReactionAdd', this.onReactionAdd);
     this.client.on('messageReactionRemove', this.onReactionRemove);
+
+    this.client.channels.fetch(config.channels.welcome as Snowflake).then((channel) => {
+      if (channel?.isText()) {
+        channel.messages.fetch();
+      }
+    });
   }
 
-  private async onReactionAdd(message: MessageReaction, user: User | PartialUser) {
+  private async onReactionAdd(
+    message: MessageReaction | PartialMessageReaction,
+    user: User | PartialUser
+  ) {
     if (user.bot || message.message.channel.id !== config.channels.welcome) {
       return;
     }
@@ -27,7 +43,10 @@ export default class LanguageSelectionListener extends Listener {
     }
   }
 
-  private async onReactionRemove(message: MessageReaction, user: User | PartialUser) {
+  private async onReactionRemove(
+    message: MessageReaction | PartialMessageReaction,
+    user: User | PartialUser
+  ) {
     if (user.bot || message.message.channel.id !== config.channels.welcome) {
       return;
     }
@@ -49,9 +68,9 @@ export default class LanguageSelectionListener extends Listener {
   private static getRoleByReaction(emoji: Emoji): Snowflake | null {
     switch (emoji.name) {
       case '\uD83C\uDDEC\uD83C\uDDE7':
-        return config.roles.en;
+        return config.roles.en as Snowflake;
       case '\uD83C\uDDEB\uD83C\uDDF7':
-        return config.roles.fr;
+        return config.roles.fr as Snowflake;
       default:
         return null;
     }

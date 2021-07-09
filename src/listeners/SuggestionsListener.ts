@@ -4,7 +4,7 @@ import config from '../../config';
 
 export default class SuggestionsListener extends Listener {
   public register() {
-    this.client.on('message', this.onMessage);
+    this.client.on('messageCreate', this.onMessage);
   }
 
   private onMessage(message: Message) {

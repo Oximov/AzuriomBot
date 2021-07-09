@@ -1,6 +1,7 @@
 export default [
   {
     name: 'ask',
+    description: 'Explains how to ask a question.',
     embed: {
       en: {
         title: 'Ask your question',
@@ -28,6 +29,7 @@ export default [
   },
   {
     name: 'faq',
+    description: 'Send the link of the FAQ.',
     embed: {
       en: {
         title: 'Common Problems',
@@ -43,6 +45,7 @@ export default [
   },
   {
     name: 'docs',
+    description: 'Send the link of the documentation.',
     embed: {
       en: {
         title: 'Documentation',
@@ -58,6 +61,7 @@ export default [
   },
   {
     name: 'install',
+    description: 'Send the link of the installation documentation.',
     embed: {
       en: {
         title: 'Installation',
@@ -69,8 +73,7 @@ export default [
             value: 'https://youtu.be/Deb0PBKpar8',
           },
           {
-            name:
-              'If you encounter problems during installation, make sure to look at the common problems in the documentation.',
+            name: 'If you encounter problems during installation, make sure to look at the common problems in the documentation.',
             value: 'https://azuriom.com/en/docs/troubleshooting',
           },
         ],
@@ -85,8 +88,7 @@ export default [
             value: 'https://youtu.be/Deb0PBKpar8',
           },
           {
-            name:
-              'Si vous rencontrez des problèmes lors de l’installation, pensez à regarder les problèmes courants dans la documentation.',
+            name: 'Si vous rencontrez des problèmes lors de l’installation, pensez à regarder les problèmes courants dans la documentation.',
             value: 'https://azuriom.com/fr/docs/troubleshooting',
           },
         ],
@@ -95,6 +97,7 @@ export default [
   },
   {
     name: 'logs',
+    description: 'Explains where are located the logs files.',
     embed: {
       en: {
         title: 'Logs',

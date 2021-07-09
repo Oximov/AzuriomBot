@@ -1,4 +1,4 @@
-import { Client, Collection } from 'discord.js';
+import { Client, Collection, Intents } from 'discord.js';
 import AutoUploadListener from './listeners/AutoUploadListener';
 import CommandsListener from './listeners/CommandsListener';
 import LanguageSelectionListener from './listeners/LanguageSelectionListener';
@@ -9,19 +9,26 @@ import commands from './commands/commands';
 import config from '../config';
 
 export default class AzuriomBot {
-  public readonly client = new Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
+  public readonly client = new Client({
+    intents: [
+      Intents.FLAGS.GUILDS,
+      Intents.FLAGS.GUILD_MESSAGES,
+      Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
+    ],
+  });
 
   public readonly commands = new Collection<string, Command>();
 
   private running = false;
 
   public async start() {
-    this.registerListeners();
     this.registerCommands();
 
     await this.client.login(config.token);
 
     this.running = true;
+
+    this.registerListeners();
 
     this.client.user?.setActivity('https://azuriom.com');
 
@@ -51,7 +58,16 @@ export default class AzuriomBot {
 
   private registerCommands() {
     commands.forEach((command) => {
-      this.commands.set(command.name, new SimpleCommand(command.name, command.embed));
+      this.commands.set(
+        command.name,
+        new SimpleCommand(command.name, command.description, command.embed)
+      );
+    });
+
+    this.client.once('ready', async () => {
+      if (this.client.application) {
+        await this.client.application.commands.set(this.commands.array());
+      }
     });
   }
 }
