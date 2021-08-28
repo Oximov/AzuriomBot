@@ -111,4 +111,19 @@ export default [
       },
     },
   },
+  {
+    name: 'database',
+    embed: {
+      en: {
+        title: 'Database connection problem',
+        message:
+          "If you have a 500 error, and the logs indicate \"Connection refused\" it means that the database connection identifier is not correct. To resolve this error is very simple, you just have to modify them in the file named \".env\" at the root of the site.",
+      },
+      fr: {
+        title: 'Problème de connexion a la base de données',
+        message:
+          "Si vous avez une erreur 500, et que les logs indique \"Connection refused\" ça veut dire que les identifiant de connexion a la base de donnée ne sont pas correct. Pour résoudre cette erreur c'est très simple, il suffit de les modifier dans le fichier nommé \".env\" a la raçine du site.",
+      },
+    },
+  },
 ];
