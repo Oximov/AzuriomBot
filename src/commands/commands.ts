@@ -102,27 +102,12 @@ export default [
       en: {
         title: 'Logs',
         message:
-          "In case of 500 error, please send the logs located in `storage/logs` folder in order to simplify troubleshooting! If the logs aren't created, check the permissions.",
+          "In case of 500 error, please send the logs **of the CMS** located in `storage/logs` folder in order to simplify troubleshooting! If the logs aren't created, check the permissions.",
       },
       fr: {
         title: 'Logs',
         message:
-          "En cas d’erreur 500, envoyez les logs situés dans dans le dossier `storage/logs` afin de pouvoir simplifier la résolution du problème! Si aucun logs n'est créé, pensez à vérifier les permissions.",
-      },
-    },
-  },
-  {
-    name: 'database',
-    embed: {
-      en: {
-        title: 'Database connection problem',
-        message:
-          "If you have a 500 error, and the logs indicate \"Connection refused\" it means that the database connection identifier is not correct. To resolve this error is very simple, you just have to modify them in the file named \".env\" at the root of the site.",
-      },
-      fr: {
-        title: 'Problème de connexion a la base de données',
-        message:
-          "Si vous avez une erreur 500, et que les logs indique \"Connection refused\" ça veut dire que les identifiant de connexion a la base de donnée ne sont pas correct. Pour résoudre cette erreur c'est très simple, il suffit de les modifier dans le fichier nommé \".env\" a la raçine du site.",
+          "En cas d’erreur 500, envoyez les logs **du CMS** situés dans dans le dossier `storage/logs` afin de pouvoir simplifier la résolution du problème! Si aucun logs n'est créé, pensez à vérifier les permissions.",
       },
     },
   },
