@@ -34,12 +34,12 @@ export default [
       en: {
         title: 'Common Problems',
         message:
-          'Solutions to common problems are explained in the [documentation](https://azuriom.com/en/docs/troubleshooting).',
+          'Solutions to common problems are explained in the [documentation](https://azuriom.com/en/docs/faq).',
       },
       fr: {
         title: 'Problèmes courants',
         message:
-          'Les solutions aux problèmes courants sont expliquées dans la [documentation](https://azuriom.com/fr/docs/troubleshooting)',
+          'Les solutions aux problèmes courants sont expliquées dans la [documentation](https://azuriom.com/fr/docs/faq)',
       },
     },
   },
@@ -74,7 +74,7 @@ export default [
           },
           {
             name: 'If you encounter problems during installation, make sure to look at the common problems in the documentation.',
-            value: 'https://azuriom.com/en/docs/troubleshooting',
+            value: 'https://azuriom.com/en/docs/faq',
           },
         ],
       },
@@ -89,7 +89,7 @@ export default [
           },
           {
             name: 'Si vous rencontrez des problèmes lors de l’installation, pensez à regarder les problèmes courants dans la documentation.',
-            value: 'https://azuriom.com/fr/docs/troubleshooting',
+            value: 'https://azuriom.com/fr/docs/faq',
           },
         ],
       },
@@ -102,12 +102,12 @@ export default [
       en: {
         title: 'Logs',
         message:
-          "In case of 500 error, please send the logs located in `storage/logs` folder in order to simplify troubleshooting! If the logs aren't created, check the permissions.",
+          "In case of 500 error, please send the logs **of Azuriom** located in `storage/logs` folder in order to simplify troubleshooting! If the logs aren't created, check the permissions.",
       },
       fr: {
         title: 'Logs',
         message:
-          "En cas d’erreur 500, envoyez les logs situés dans dans le dossier `storage/logs` afin de pouvoir simplifier la résolution du problème! Si aucun logs n'est créé, pensez à vérifier les permissions.",
+          "En cas d’erreur 500, envoyez les logs **d'Azuriom** situés dans dans le dossier `storage/logs` afin de pouvoir simplifier la résolution du problème! Si aucun logs n'est créé, pensez à vérifier les permissions.",
       },
     },
   },
