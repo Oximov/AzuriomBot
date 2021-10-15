@@ -102,12 +102,12 @@ export default [
       en: {
         title: 'Logs',
         message:
-          "In case of 500 error, please send the logs **of the CMS** located in `storage/logs` folder in order to simplify troubleshooting! If the logs aren't created, check the permissions.",
+          "In case of 500 error, please send the logs **of Azuriom** located in `storage/logs` folder in order to simplify troubleshooting! If the logs aren't created, check the permissions.",
       },
       fr: {
         title: 'Logs',
         message:
-          "En cas d’erreur 500, envoyez les logs **du CMS** situés dans dans le dossier `storage/logs` afin de pouvoir simplifier la résolution du problème! Si aucun logs n'est créé, pensez à vérifier les permissions.",
+          "En cas d’erreur 500, envoyez les logs **d'Azuriom** situés dans dans le dossier `storage/logs` afin de pouvoir simplifier la résolution du problème! Si aucun logs n'est créé, pensez à vérifier les permissions.",
       },
     },
   },
